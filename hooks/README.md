@@ -14,6 +14,10 @@ Welcome to the comprehensive React Hooks learning guide! This repository contain
 5. [useReducer](#usereducer) - Complex state logic
 6. [useMemo](#usememo) - Performance optimization (values)
 7. [useCallback](#usecallback) - Performance optimization (functions)
+8. [useLayoutEffect](#uselayouteffect) - Synchronous layout effects
+
+### Custom Hooks
+9. [Custom Hooks](#custom-hooks) - Reusable hook patterns
 
 ## 🎯 Hook Overview
 
@@ -112,6 +116,40 @@ Welcome to the comprehensive React Hooks learning guide! This repository contain
 
 ---
 
+### useLayoutEffect
+**Purpose:** Synchronous layout effects before browser paint
+
+**When to use:**
+- Measuring DOM elements
+- Preventing visual flicker
+- Scroll position restoration
+- Tooltip/popover positioning
+- Synchronous DOM updates
+
+**⚠️ Warning:** Can hurt performance. Prefer useEffect when possible.
+
+**[View Documentation →](./useLayoutEffect/README.md)** | **[View Examples →](./useLayoutEffect/examples.jsx)**
+
+---
+
+### Custom Hooks
+**Purpose:** Extract and reuse component logic
+
+**When to use:**
+- Sharing logic between components
+- Simplifying complex components
+- Creating reusable patterns
+- Building abstractions
+
+**Common examples:**
+- useLocalStorage, useFetch, useDebounce
+- useToggle, usePrevious, useWindowSize
+- useOnClickOutside, useInterval, useAsync
+
+**[View Documentation →](./custom-hooks/README.md)** | **[View Examples →](./custom-hooks/examples.jsx)**
+
+---
+
 ## 🎓 Learning Path
 
 ### Beginner
@@ -126,9 +164,11 @@ Once comfortable with basics, learn:
 5. **useReducer** - Complex state management patterns
 
 ### Advanced
-Finally, master performance optimization:
+Finally, master performance optimization and advanced patterns:
 6. **useMemo** - Optimize expensive calculations
 7. **useCallback** - Optimize callback functions
+8. **useLayoutEffect** - Synchronous layout effects
+9. **Custom Hooks** - Build reusable patterns
 
 ## 📋 Quick Reference
 
@@ -268,6 +308,12 @@ const callback = useCallback(() => {
 ```
 hooks/
 ├── README.md (this file)
+├── package.json
+├── index.html
+├── vite.config.js
+├── src/
+│   ├── main.jsx
+│   └── App.jsx
 ├── useState/
 │   ├── README.md
 │   └── examples.jsx
@@ -286,10 +332,42 @@ hooks/
 ├── useMemo/
 │   ├── README.md
 │   └── examples.jsx
-└── useCallback/
+├── useCallback/
+│   ├── README.md
+│   └── examples.jsx
+├── useLayoutEffect/
+│   ├── README.md
+│   └── examples.jsx
+└── custom-hooks/
     ├── README.md
     └── examples.jsx
 ```
+
+## 🚀 Getting Started
+
+### Running the Interactive Demo
+
+```bash
+# Install dependencies
+cd hooks
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+The demo app will open at `http://localhost:3000` with an interactive UI to explore all hooks!
+
+### Viewing Individual Examples
+
+Each hook folder contains:
+- **README.md** - Comprehensive documentation
+- **examples.jsx** - Interactive code examples
+
+You can also view the examples directly in your code editor or IDE.
 
 ## 🎯 How to Use This Guide
 
