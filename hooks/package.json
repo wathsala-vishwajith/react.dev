@@ -1,0 +1,36 @@
+{
+  "name": "react-hooks-examples",
+  "version": "1.0.0",
+  "description": "Comprehensive React Hooks examples with best practices and anti-patterns",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "useState",
+    "useEffect",
+    "useContext",
+    "useRef",
+    "useReducer",
+    "useMemo",
+    "useCallback",
+    "useLayoutEffect",
+    "custom-hooks",
+    "examples",
+    "best-practices"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "vite": "^4.3.9"
+  }
+}
