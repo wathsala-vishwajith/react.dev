@@ -37,6 +37,9 @@ function Board({ xIsNext, squares, onPlay }) {
   let status;
   if (winner) {
     status = 'Winner: ' + winner;
+  } else if (squares.every(square => square !== null)) {
+    // All squares filled with no winner = draw
+    status = 'Draw! Game ended in a tie.';
   } else {
     status = 'Next player: ' + (xIsNext ? 'X' : 'O');
   }
@@ -99,6 +102,16 @@ export default function Game() {
     } else {
       description = 'Go to game start';
     }
+
+    // Show current move as text instead of button
+    if (move === currentMove) {
+      return (
+        <li key={move}>
+          <strong>You are at move #{move}</strong>
+        </li>
+      );
+    }
+
     return (
       <li key={move}>
         <button onClick={() => jumpTo(move)}>{description}</button>
