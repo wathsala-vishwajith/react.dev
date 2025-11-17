@@ -15,6 +15,8 @@ function Square({ value, onSquareClick }) {
 export default function Board() {
   // State: array of 9 elements, each representing a square (null = empty)
   const [squares, setSquares] = useState(Array(9).fill(null));
+  // State: track whose turn it is (true = X's turn, false = O's turn)
+  const [xIsNext, setXIsNext] = useState(true);
 
   // Handle click on a square
   function handleClick(i) {
@@ -25,14 +27,21 @@ export default function Board() {
 
     // Create a copy of the squares array (immutability)
     const nextSquares = squares.slice();
-    // Set the clicked square to "X"
-    nextSquares[i] = 'X';
+    // Set the clicked square to "X" or "O" depending on whose turn it is
+    if (xIsNext) {
+      nextSquares[i] = 'X';
+    } else {
+      nextSquares[i] = 'O';
+    }
     // Update state with the new array
     setSquares(nextSquares);
+    // Toggle whose turn it is for the next move
+    setXIsNext(!xIsNext);
   }
 
   return (
     <>
+      <div className="status">Next player: {xIsNext ? 'X' : 'O'}</div>
       <div className="board-row">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
         <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
