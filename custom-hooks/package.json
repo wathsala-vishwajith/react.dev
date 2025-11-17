@@ -1,0 +1,26 @@
+{
+  "name": "custom-hooks-examples",
+  "version": "1.0.0",
+  "description": "Examples demonstrating React custom hooks vs. not using custom hooks",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "custom-hooks",
+    "examples",
+    "tutorial"
+  ],
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "vite": "^4.3.9"
+  }
+}
