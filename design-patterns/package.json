@@ -1,0 +1,32 @@
+{
+  "name": "design-patterns-typescript",
+  "version": "1.0.0",
+  "description": "A comprehensive TypeScript repository showcasing 10 essential design patterns with practical use cases",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "design-patterns",
+    "typescript",
+    "factory",
+    "builder",
+    "observer",
+    "strategy",
+    "singleton",
+    "decorator",
+    "adapter",
+    "command",
+    "template-method",
+    "prototype"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0"
+  }
+}
